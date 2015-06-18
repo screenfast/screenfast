@@ -1,5 +1,10 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
+/* #b22e2b red
+   #ba6930 orange
+   #008e7f green
+   #0873ba blue */
+
 html {
     color: #222;
     font-size: 1em;
@@ -52,9 +57,7 @@ textarea {
 }
 
 
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
+/* ===== Main styles ================================================= */
 
 html {
     font-size: 100%;
@@ -65,7 +68,16 @@ body {
   line-height: 1.5;
   font-weight: 400;
   font-family: "Titillium Web", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222;
+  color: #ffffff;
+
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(211,212,209,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(211,212,209,1))); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(211,212,209,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(211,212,209,1) 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(211,212,209,1) 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(211,212,209,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d4d1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .wrapper {
@@ -73,194 +85,80 @@ body {
     margin: 0 5%;
 }
 
-/* ===================
-    ALL: Orange Theme
-   =================== */
+/* ===== Theme ================================================= */
 
-.header-container {
-    border-bottom: 20px solid #e44d26;
+.blue {
+  background: #0873ba;
 }
 
-.footer-container,
-.main aside {
-    border-top: 20px solid #e44d26;
+.red {
+  background: #b22e2b;
 }
 
-.header-container,
-.footer-container,
-.main aside {
-    background: #f16529;
+.green {
+  background: #008e7f;
 }
 
-.title {
-    color: white;
+.orange {
+  background: #ba6930;
 }
 
-/* ==============
-    MOBILE: Menu
-   ============== */
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+.left {
+  float: left;
 }
 
-nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
-
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-
-    color: white;
-    background: #e44d26;
+.right {
+  float: right;
 }
 
-nav a:hover,
-nav a:visited {
-    color: white;
+.text-box {
+  text-align: left;
+  padding: 5%;
+  margin: 10px 0;
+  -webkit-box-shadow: 0 5px 10px #aaa;
+     -moz-box-shadow: 0 5px 10px #aaa;
+          box-shadow: 0 5px 10px #aaa;
 }
 
-nav a:hover {
-    text-decoration: underline;
+@media only screen and (min-width: 480px) {
+
+  .text-box {
+    width: 40%;
+    padding: 2.5%;
+  }
+
 }
 
-/* ==============
-    MOBILE: Main
-   ============== */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ffffff;
+    background-image: linear-gradient(to right, #e2e2e2, #ffffff, #e2e2e2);
+}
 
 .main {
-    padding: 30px 0;
+    padding: 10px 0;
+    text-align: center;
 }
 
-.main article h1 {
+.main h1 {
     font-size: 2em;
 }
-
-.main aside {
-    color: white;
-    padding: 0px 5% 10px;
-}
-
-.footer-container footer {
-    color: white;
-    padding: 20px 0;
-}
-
-/* ===============
-    ALL: IE Fixes
-   =============== */
-
-.ie7 .title {
-    padding-top: 20px;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 480px) {}
 
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
+@media only screen and (min-width: 768px) {}
 
-    nav a {
-        float: left;
-        width: 27%;
-        margin: 0 1.7%;
-        padding: 25px 2%;
-        margin-bottom: 0;
-    }
-
-    nav li:first-child a {
-        margin-left: 0;
-    }
-
-    nav li:last-child a {
-        margin-right: 0;
-    }
-
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-
-    nav ul li {
-        display: inline;
-    }
-
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-
-    .header-container,
-    .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
-    }
-
-/* ============
-    WIDE: Menu
-   ============ */
-
-    .title {
-        float: left;
-    }
-
-    nav {
-        float: right;
-        width: 38%;
-    }
-
-/* ============
-    WIDE: Main
-   ============ */
-
-    .main article {
-        float: left;
-        width: 57%;
-    }
-
-    .main aside {
-        float: right;
-        width: 28%;
-    }
-}
-
-@media only screen and (min-width: 1140px) {
 
 /* ===============
     Maximal Width
    =============== */
+
+@media only screen and (min-width: 1140px) {
 
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
@@ -271,36 +169,6 @@ nav a:hover {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
 
 .clearfix:before,
 .clearfix:after {
