@@ -6,9 +6,8 @@
    #0873ba blue */
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+    font-size: 100%;
+    line-height: 1.5;
 }
 
 ::-moz-selection {
@@ -48,14 +47,6 @@ fieldset {
 textarea {
     resize: vertical;
 }
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
 
 /* ===== Main styles ================================================= */
 
@@ -104,23 +95,24 @@ body {
   background: #ba6930;
 }
 
-/* .left {
-  float: left;
+.grey {
+  background: #353535;
 }
-
-.right {
-  float: right;
-} */
 
 .text-box {
   text-align: left;
-  /* float: left; */
   display: inline-block;
   padding: 5%;
   margin: 10px 0;
   -webkit-box-shadow: 0 5px 10px #aaa;
      -moz-box-shadow: 0 5px 10px #aaa;
           box-shadow: 0 5px 10px #aaa;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  padding: 0 0 10px 0;
 }
 
 @media only screen and (min-width: 480px) {
@@ -131,8 +123,13 @@ body {
     margin-left: 2%;
   }
 
-  .u-no-left-margin {
+  .no-left-margin {
     margin-left: 0;
+  }
+
+  .logo {
+    width: 45%;
+    height: auto;
   }
 
 }
@@ -155,13 +152,17 @@ h2 {
   margin: .25em 0;
 }
 
+iframe {
+  margin: 2.5% 0;
+}
+
 .video-wrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
   margin: 2.5% 0;
-  background: black;
+  background: white;
 }
 .video-wrapper iframe {
 	position: absolute;
@@ -196,29 +197,41 @@ h2 {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 form {
-  margin: 5% auto;
-  padding: 0 3%;
+  margin: 20px 0;
+  padding: 0;
 }
 
 .group 			  {
   position:relative;
-  margin-bottom:45px;
-}
-input 				{
-  padding:10px 10px 10px 5px;
+  margin: 10px 0;
+/*   margin-bottom:45px;
+ */}
+input, textarea	{
+  padding: 10px 0;
+  margin: 10px 0;
   display:inline-block;
   width:100%;
   border:none;
-  border-bottom:1px solid #757575;
+  font-family: "Titillium Web", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #353535;
+  font-size: 100%;
 }
-input:focus {
+
+input[type="submit"] {
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+}
+
+input:focus, textarea:focus {
   outline:none;
 }
+
+@media only screen and (min-width: 480px) {
 
 /* LABEL ======================================= */
 label 				 {
   color:#999;
-  font-weight:normal;
   position:absolute;
   pointer-events:none;
   left:5px;
@@ -229,10 +242,12 @@ label 				 {
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label 		{
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
   top:-20px;
-  font-size:14px;
-  color:#5264AE;
+  color:#ba6930;
 }
 
 /* BOTTOM BARS ================================= */
@@ -243,7 +258,7 @@ input:focus ~ label, input:valid ~ label 		{
   width:0;
   bottom:1px;
   position:absolute;
-  background:#5264AE;
+  background:#ba6930;
   transition:0.2s ease all;
   -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
@@ -256,42 +271,27 @@ input:focus ~ label, input:valid ~ label 		{
 }
 
 /* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
-}
-
-/* HIGHLIGHTER ================================== */
-.highlight {
-  position:absolute;
-  height:60%;
-  width:33%;
-  top:25%;
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
-}
-
-/* active state */
-input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
+input:focus ~ .bar:before,
+input:focus ~ .bar:after,
+textarea:focus ~ .bar:before,
+textarea:focus ~ .bar:after {
+  width:100%;
 }
 
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
-	from { background:#5264AE; }
+	from { background:#ba6930; }
   to 	{ width:0; background:transparent; }
 }
 @-moz-keyframes inputHighlighter {
-	from { background:#5264AE; }
+	from { background:#ba6930; }
   to 	{ width:0; background:transparent; }
 }
 @keyframes inputHighlighter {
-	from { background:#5264AE; }
+	from { background:#ba6930; }
   to 	{ width:0; background:transparent; }
 }
-
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -313,6 +313,10 @@ input:focus ~ .highlight {
 .center {
   margin: 0 auto;
   text-align: center;
+}
+
+.full-width {
+  width: 100%;
 }
 /* ==========================================================================
    Print styles
