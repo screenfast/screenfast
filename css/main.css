@@ -135,6 +135,18 @@ h2 {
   width: 100%;
 }
 
+footer {
+  color: #353535;
+}
+
+footer a {
+  color: #b22e2b;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #b22e2b;
+}
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
