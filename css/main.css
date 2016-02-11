@@ -630,7 +630,7 @@ label {
   .landing {
     display: inline-block;
     width: 55%;
-    margin: 30px;
+    margin: 15px;
   }
 
   .landing.red:hover {
