@@ -640,6 +640,11 @@ label {
   .landing.orange:hover {
     background: #a25d32;
   }
+
+  .landing.blue:hover {
+    background: #0663a1;
+  }
+
   .no-left-margin {
     margin-left: 0;
   }
